@@ -83,18 +83,39 @@ Assign the result to a variable named swappedString.
 
 */
 
-//Starter Code
-// Task 1
+// Exercise 1: Retrieve and Add Two Code Points
+let inputString = "Hi";
+let sumCodePoints = inputString.charCodeAt(0) + inputString.charCodeAt(1);
+console.log("sumCodePoints:", sumCodePoints); // Expected Output: 177
+
+// Exercise 2: Generate a String from Two Code Points
+let codePoint1 = 65;
+let codePoint2 = 66;
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+console.log("combinedString:", combinedString); // Expected Output: "AB"
+
+// Exercise 3: Find the Character Difference
+let inputString2 = "Cat";
+let index1 = 0;
+let index2 = 2;
+let codePointDifference = Math.abs(inputString2.charCodeAt(index1) - inputString2.charCodeAt(index2));
+console.log("codePointDifference:", codePointDifference); // Expected Output: 49
+
+// Practice Problem #2
+
+// Task 1: Extract Code Points from Characters
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0);
+let thirdCodePoint = inputString1.charCodeAt(2);
 
-// Task 2
-let wordFromCodePoints; // Your code here
+// Task 2: Create a Word from Code Points
+let wordFromCodePoints = String.fromCharCode(72, 101, 108, 108); // "Hell"
 
-// Task 3
-let inputString2 = "Launch";
-let swappedString; // Your code here
+// Task 3: Swap First and Last Characters
+let inputString3 = "Launch";
+let firstChar = String.fromCharCode(inputString3.charCodeAt(inputString3.length - 1)); // Last character
+let lastChar = String.fromCharCode(inputString3.charCodeAt(0)); // First character
+let swappedString = firstChar + inputString3.slice(1, -1) + lastChar; // Construct new string
 
 // Log all results
 console.log({
@@ -103,3 +124,4 @@ console.log({
   wordFromCodePoints,
   swappedString,
 });
+
